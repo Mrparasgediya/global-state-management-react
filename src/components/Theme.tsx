@@ -6,17 +6,26 @@ const Theme = ({
 }: {
   children: React.ReactElement | React.ReactElement[];
 }) => {
-  const [myTheme, setMyTheme] = useTheme();
+  const [theme, setTheme] = useTheme();
 
   return (
     <div
       style={{
         height: "100vh",
         width: "100vw",
-        backgroundColor: myTheme === "dark" ? "gray" : "pink",
+        backgroundColor: theme === "dark" ? "gray" : "pink",
       }}
     >
-      <button onClick={setMyTheme}>click</button>
+      <div
+        style={{
+          display: "flex",
+          gap: "1rem",
+          alignItems: "center",
+        }}
+      >
+        <div>currTheme: {theme}</div>
+        <button onClick={setTheme}>Toggle Theme</button>
+      </div>{" "}
       {children}
     </div>
   );
