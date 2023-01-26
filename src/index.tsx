@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import RouterContextProvider from "./components/RouterComponent";
+import ThemeContextProvider from "./components/ThemeContextProvider";
 import "./index.css";
 
 const root = ReactDOM.createRoot(
@@ -10,7 +11,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <RouterContextProvider>
-      <App />
+      <ThemeContextProvider>
+        <App />
+      </ThemeContextProvider>
     </RouterContextProvider>
   </React.StrictMode>
 );

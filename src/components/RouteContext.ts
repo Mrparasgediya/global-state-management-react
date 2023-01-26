@@ -1,6 +1,6 @@
 import { createContext } from "react";
 
-interface RouteStateType {
+export interface RouteStateType {
   routeName: string;
   setRouteName: Function;
 }

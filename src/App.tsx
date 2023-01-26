@@ -1,11 +1,9 @@
-import { useContext } from "react";
 import Home from "./components/Home";
 import Profile from "./components/Profile";
-import RouteContext from "./components/RouteContext";
+import useRouter from "./components/useRouter";
 
 function App() {
-  const { routeName } = useContext(RouteContext);
-
+  const [routeName] = useRouter();
   switch (routeName) {
     case "home":
       return <Home />;

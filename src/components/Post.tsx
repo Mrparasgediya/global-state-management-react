@@ -1,5 +1,4 @@
-import { useContext } from "react";
-import RouteContext from "./RouteContext";
+import useRouter from "./useRouter";
 
 export interface PostType {
   id: number;
@@ -12,7 +11,7 @@ interface PostProps {
 }
 
 const Post = ({ post }: PostProps) => {
-  const { setRouteName } = useContext(RouteContext);
+  const [, setRouteName] = useRouter();
   return (
     <div>
       <h2>{post.title}</h2>

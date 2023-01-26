@@ -1,8 +1,8 @@
-import { useContext } from "react";
-import RouteContext from "./RouteContext";
+import useRouter from "./useRouter";
 
 const Profile = () => {
-  const { setRouteName } = useContext(RouteContext);
+  const [, setRouteName] = useRouter();
+
   return (
     <>
       <h1>Profile Section</h1>

@@ -1,4 +1,5 @@
 import Post, { PostType } from "./Post";
+import Theme from "./Theme";
 
 const posts: PostType[] = [
   {
@@ -20,11 +21,11 @@ const posts: PostType[] = [
 
 const Home = () => {
   return (
-    <>
+    <Theme>
       {posts.map((currPost, idx) => (
         <Post key={idx} post={currPost} />
       ))}
-    </>
+    </Theme>
   );
 };
 
